@@ -7,30 +7,34 @@ module.exports = (sequelize) => {
     id: {
       type: DataTypes.UUID,
       defaultValue: sequelize.UUIDV4,
-      primaryKey: true
+      primaryKey: true,
+      allowNull: false
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     min_height: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     min_weight: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     max_height: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     max_weight: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     lifespan: {
-      type: DataTypes.INTEGER
+      type: DataTypes.STRING
+    },
+    image: {
+      type: DataTypes.STRING
     }
   }, {
     timestamps: false
