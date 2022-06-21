@@ -61,7 +61,7 @@ export function DogCreate() {
 
     setInput({
       ...input,
-      [e.target.name]: e.target.value, //cada vez que la funcion se ejecute a mi estado input ademas de lo que tiene agregale el target value de lo que esta modificando
+      [e.target.name]: e.target.value, //Cada vez que la funcion se ejecute, a mi estado input ademas de lo que tiene, le agrego el target value de lo que esta modificando
     });
     setErrors(
       validate({
@@ -221,9 +221,9 @@ export function DogCreate() {
             ))}
           </select>
           <div className="container__temperaments">
-            {temps.map((temp, id) => {
+            {temps.map((temp) => {
               return (
-                <React.Fragment key={id}>
+                <div key={temp}>
                   <div className="container__temp__box">
                     <p>{temp}</p>
                     <button
@@ -234,7 +234,7 @@ export function DogCreate() {
                       x
                     </button>
                   </div>
-                </React.Fragment>
+                </div>
               );
             })}
           </div>

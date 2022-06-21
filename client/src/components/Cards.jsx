@@ -9,8 +9,8 @@ export default function Card({ image, name, temperament, min_weight, max_weight 
             alt = "alt"/>
             <h4>Name: {name}</h4>
             <h5>Temperaments: {temperament}</h5>
-            <h5>Minimum Weight: {min_weight}</h5>
-            <h5>Maximum Weight: {max_weight}</h5>
+            <h5>Minimum Weight: {min_weight} Kg</h5>
+            <h5>Maximum Weight: {max_weight} Kg</h5>
         </div>
     )
 }

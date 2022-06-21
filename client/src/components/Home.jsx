@@ -21,8 +21,10 @@ export default function Home() {
   const allTemp = useSelector((state) => state.temperaments);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [dogsPerPage, setDogsPerPage] = useState(8);
-  const [orden, setOrden] = useState("");
+  //eslint-disable-next-line no-unused-vars
+  const [dogsPerPage, setDogsPerPage] = useState(8);  
+  //eslint-disable-next-line no-unused-vars
+  const [orden, setOrden] = useState("");  
   const indexOfLastDog = currentPage * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
   const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog);
@@ -38,8 +40,6 @@ export default function Home() {
 
   function handleClick(e) {
     e.preventDefault();
-    document.getElementsByClassName("container_filter").selectedIndex = 0;
-    document.getElementsByClassName("container_filter").value = "Default";
     dispatch(getDogs());
   }
 
@@ -107,8 +107,8 @@ export default function Home() {
             <option value="desc">Descending</option>
           </select>
           <select onChange={(e) => handleSortW(e)}>
-            <option value="mayor">Max Weight</option>
-            <option value="menor">Min Weight</option>
+            <option value="max">Max Weight</option>
+            <option value="min">Min Weight</option>
           </select>
           <select onChange={(e) => handleFilterCreated(e)}>
             <option value="all">All</option>
@@ -120,8 +120,7 @@ export default function Home() {
             <option value="all"> All </option>
             {allTemp.map((t) => (
               <option key={t.id} value={t.name}>
-                {" "}
-                {t.name}{" "}
+                {t.name}
               </option>
             ))}
           </select>
@@ -143,7 +142,7 @@ export default function Home() {
                 <Link to={"/home/" + the.id}>
                   <Card
                     name={the.name}
-                    image={the.image ? the.image : the.img}
+                    image={the.image}
                     min_weight={the.min_weight}
                     max_weight={the.max_weight}
                     temperament={

@@ -29,7 +29,7 @@ function mainReducer(state = initialState, action) {
                         }
                     }
                     else if(e.temperaments) {
-                        const x = e.temperaments?.map(the => the.name.concat(""))
+                        const x = e.temperaments?.map(the => the.name)
                         if(x.includes(action.payload)){
                             return e;
                         }
@@ -72,7 +72,7 @@ function mainReducer(state = initialState, action) {
                 dogs: sorted
             }
         case 'ORDER_BY_WEIGHT' : 
-            let sortedW = action.payload === "menor" ?
+            let sortedW = action.payload === "min" ?
             state.dogs.sort(function (a, b) {                         
                     if (parseInt(a.min_weight) > parseInt(b.min_weight)) { return 1 }
                     if (parseInt(a.min_weight) < parseInt(b.min_weight)) { return -1 }
@@ -91,10 +91,6 @@ function mainReducer(state = initialState, action) {
             return {
                 ...state,
                 dogs: action.payload
-            }
-        case 'POST_DOG' :
-            return{
-                ...state
             }
         case 'GET_DETAIL' :
             return{

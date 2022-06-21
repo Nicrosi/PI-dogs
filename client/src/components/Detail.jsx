@@ -46,13 +46,13 @@ export default function Detail(props) {
                 </div>
                 <div className="sub_data">
                     <p className="span">Height:</p>
-                    <p>{myDog[0].min_height}cm</p>
-                    <p>{myDog[0].max_height}cm</p>
+                    <p>Minimum - {myDog[0].min_height}cm</p>
+                    <p>Maximum - {myDog[0].max_height}cm</p>
                 </div>
                 <div className="sub_data">
                     <p className="span">Weight:</p>
-                    <p>{myDog[0].min_weight} Minimum</p>
-                    <p>{myDog[0].max_weight} Maximum</p>
+                    <p>Minimum - {myDog[0].min_weight} Kg</p>
+                    <p>Maximum - {myDog[0].max_weight} Kg</p>
                 </div>
             </div>
         </div>

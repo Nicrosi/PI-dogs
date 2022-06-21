@@ -23,8 +23,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     let {id} = req.params;
     const everyDog = await getAll();
-    let breed_id = await everyDog.filter(e => e.id.toString() === id.toString())
-    if (breed_id.length > 0) res.status(200).send(breed_id);
+    let breed_id = await everyDog.filter(e => e.id === id)
+    if (breed_id) res.status(200).send(breed_id);
     else res.status(404).send('Dog not found!');
 })
 
