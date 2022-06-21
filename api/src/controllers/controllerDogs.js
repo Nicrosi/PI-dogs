@@ -1,5 +1,5 @@
 const axios = require('axios');
-const {Dogs, Temperaments} = require('../db');
+const {Dog, Temperament} = require('../db');
 
 const getApi = async () =>{
     try{
@@ -32,9 +32,9 @@ const getApi = async () =>{
 
 const getDb = async () =>{
     try{
-        const dogDB = await Dogs.findAll({
+        const dogDB = await Dog.findAll({
             include: {
-                model: Temperaments,
+                model: Temperament,
                 attributes: ['name'],
                 through: {
                     attributes: [],

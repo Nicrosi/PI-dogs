@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const {getAll} = require('../controllers/controllerDogs');
+const {getAll} = require('../controllers/controllerDogs.js');
 const {Dog, Temperament} = require('../db');
 
 router.get('/', async (req, res) => {

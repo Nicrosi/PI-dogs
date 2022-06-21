@@ -6,7 +6,7 @@ module.exports = (sequelize) => {
   sequelize.define('dog', {
     id: {
       type: DataTypes.UUID,
-      defaultValue: sequelize.UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
       allowNull: false
     },
@@ -30,7 +30,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lifespan: {
+    life_span: {
       type: DataTypes.STRING
     },
     image: {

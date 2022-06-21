@@ -10,6 +10,6 @@ const router = Router();
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.use('/dogs', DogRoute);
-router.use('/temperament', TemperamentRoute);
+router.use('/temperaments', TemperamentRoute);
 
 module.exports = router;

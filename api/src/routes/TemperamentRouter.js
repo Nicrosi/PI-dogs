@@ -1,4 +1,4 @@
-const {getAll} = require('../controllers/controllerDog.js');
+const {getAll} = require('../controllers/controllerDogs.js');
 const {Router} = require('express');
 const router = Router();
 const {Temperament} = require('../db');
