@@ -55,7 +55,7 @@ function mainReducer(state = initialState, action) {
                 dogs: action.payload === "all" ? state.everyDog : filterCreated
             }
         case 'ORDER_BY_NAME' :
-            let sorted = action.payload === 'asc' ?
+            let sorted = action.payload === 'atoz' ?
                 state.dogs.sort(function(a,b){
                     if(a.name.toLowerCase() > b.name.toLowerCase()) {return 1}
                     if(b.name.toLowerCase() > a.name.toLowerCase()) {return -1}

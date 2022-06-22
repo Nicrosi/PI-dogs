@@ -105,8 +105,8 @@ export default function Home() {
         <div className="container__filter">
           <select onChange={(e) => handleSort(e)} defaultValue="Order Alphabetically">
             <option disabled>Order Alphabetically</option>
-            <option value="asc">Ascending</option>
-            <option value="desc">Descending</option>
+            <option value="atoz">A to Z</option>
+            <option value="ztoa">Z to A</option>
           </select>
           <select onChange={(e) => handleSortW(e)} defaultValue="Order by Weight">
             <option disabled>Order by Weight</option>

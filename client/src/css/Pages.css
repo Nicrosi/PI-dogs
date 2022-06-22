@@ -22,7 +22,7 @@ button[disabled]:active, button[disabled]{
     cursor: inherit;
     background-color: rgb(168, 168, 168);
     background: rgb(168, 168, 168);
-  }
+}
 
 button[disabled]:active, button[disabled]:hover{
     opacity: 1;
