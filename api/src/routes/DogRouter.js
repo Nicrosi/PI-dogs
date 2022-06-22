@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const { getDogs } = require('../../../client/src/actions/index.js');
 const router = Router();
 
 const {getAll} = require('../controllers/controllerDogs.js');
@@ -42,6 +43,14 @@ router.post('/', async (req, res) => {
     name = name.toLowerCase();
 
     try{
+        let findDog = await getDogs.findAll({
+            where:{
+                name: name
+            }
+        })
+        if(findDog.length > 0){
+            res.status(403).send("Dog could not be created");
+        }else{
         let new_Breed = await Dog.create({
             name,
             min_height,
@@ -61,7 +70,7 @@ router.post('/', async (req, res) => {
         console.log(temperament_dog, "I'm a dog!");
         new_Breed.addTemperament(temperament_dog);
         res.send('Sent!');
-
+    }
     }catch(err){
         console.log(err);
     }
