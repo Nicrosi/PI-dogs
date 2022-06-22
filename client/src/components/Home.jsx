@@ -103,13 +103,13 @@ export default function Home() {
 
       <div className="container__options">
         <div className="container__filter">
-          <select onChange={(e) => handleSort(e)}>
-            <option disabled selected>Order Alphabetically</option>
+          <select onChange={(e) => handleSort(e)} defaultValue="Order Alphabetically">
+            <option disabled>Order Alphabetically</option>
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
-          <select onChange={(e) => handleSortW(e)}>
-            <option disabled selected>Order by Weight</option>
+          <select onChange={(e) => handleSortW(e)} defaultValue="Order by Weight">
+            <option disabled>Order by Weight</option>
             <option value="max">Max Weight</option>
             <option value="min">Min Weight</option>
           </select>
@@ -118,8 +118,8 @@ export default function Home() {
             <option value="created">Created</option>
             <option value="api">API</option>
           </select>
-          <select onChange={(e) => handleFilterTemperament(e)}>
-            <option value="temperamento"> Temperaments </option>
+          <select onChange={(e) => handleFilterTemperament(e)} defaultValue="Temperaments">
+            <option disabled> Temperaments </option>
             <option value="all"> All </option>
             {allTemp.map((t) => (
               <option key={t.id} value={t.name}>

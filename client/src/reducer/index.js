@@ -45,7 +45,6 @@ function mainReducer(state = initialState, action) {
                 dogs: dogsFiltered
             }
         case 'FILTER_CREATED' :
-            console.log(state.everyDog, "hola pedazo de mierda inutil suicidate por favor la concha de tu recalcada hermana");
             const allDogs = state.everyDog;
             const filterCreated = action.payload === "created" ?
                 allDogs.filter(e => e.id.length > 4) :

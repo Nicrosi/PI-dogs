@@ -82,6 +82,8 @@ export function DogCreate() {
           setTemps([e.target.value]);
         }
       
+    }else{
+      alert("You can't add the same temperament more than once");
     }
     }
   }
