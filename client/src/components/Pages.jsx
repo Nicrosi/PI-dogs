@@ -17,7 +17,13 @@ export default function Pages({
     return (
       <ul className="container__pagination">
         <li>
-          
+        <button
+            className="container__button__page"
+            disabled={currentPage > 1 ? false : true}
+            onClick={() => pages(1)}
+          >
+            {'<<'}
+          </button>
           <button
             className="container__button__page"
             disabled={currentPage > 1 ? false : true}
@@ -36,6 +42,13 @@ export default function Pages({
             onClick={() => pages(currentPage + 1)}
           >
             Next
+          </button>
+          <button
+            className="container__button__page"
+            disabled={currentPage < pageNumbers.length ? false : true}
+            onClick={() => pages(pageNumbers.length)}
+          >
+            {'>>'}
           </button>
         </li>
       </ul>

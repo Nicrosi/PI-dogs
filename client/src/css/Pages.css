@@ -11,3 +11,19 @@
 .container__page__number{
     font-size: 25px;
 }
+
+.container__button__page{
+    margin-left: 10px;
+}
+
+button[disabled]:active, button[disabled]{
+    border: none;
+    color: GrayText;
+    cursor: inherit;
+    background-color: rgb(168, 168, 168);
+    background: rgb(168, 168, 168);
+  }
+
+button[disabled]:active, button[disabled]:hover{
+    opacity: 1;
+}

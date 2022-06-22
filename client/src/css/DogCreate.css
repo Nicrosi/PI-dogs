@@ -42,3 +42,8 @@ form input{
 .container__temp__box p{
     margin-left: 20px;
 }
+
+.error{
+    color: rgb(211, 64, 64);
+    font-size: 15px;
+}
