@@ -169,7 +169,7 @@ export default function Home() {
         ) : (
           <div className="container__center">
             <div className="container__error">
-              <p>No breed with that name</p>
+              <p>No breeds found</p>
             </div>
           </div>
         )}

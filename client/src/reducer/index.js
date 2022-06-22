@@ -49,10 +49,17 @@ function mainReducer(state = initialState, action) {
             const filterCreated = action.payload === "created" ?
                 allDogs.filter(e => e.id.length > 4) :
                 allDogs.filter(e => e.id.length > 0 && e.id.length < 4);
+                if(filterCreated.length > 0){
                 console.log(filterCreated, allDogs)
             return{
                 ...state,
                 dogs: action.payload === "all" ? state.everyDog : filterCreated
+            }
+            }else{
+                return{
+                ...state,
+                dogs: "error"
+                }
             }
         case 'ORDER_BY_NAME' :
             let sorted = action.payload === 'atoz' ?

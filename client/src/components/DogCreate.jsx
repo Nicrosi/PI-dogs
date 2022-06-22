@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
-import { getTemperaments, postDog } from "../actions";
+import { getTemperaments, postDog, getDogs } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 import '../css/DogCreate.css'
 
@@ -30,6 +30,11 @@ export function DogCreate() {
   const [temps, setTemps] = useState([]);
   const [errors, setErrors] = useState({});
   const navigate = useNavigate()
+  const everyDog = useSelector((state) => state.dogs)
+
+  useEffect(() =>{
+    dispatch(getDogs());
+  }, [dispatch]);
 
   const [input, setInput] = useState({
     name: "",
@@ -99,7 +104,6 @@ export function DogCreate() {
     if(!isEmpty){
       alert("No mandatory fields can remain empty")
     }else{
-
       const addDog = {
         name: input.name,
         life_span: input.life_span + " years",
@@ -109,7 +113,11 @@ export function DogCreate() {
         max_weight: input.max_weight,
         image: input.image,
         temperament: temps
-    }   
+    } 
+    const exists = everyDog.map((x) => x.name);
+    if(exists.includes(addDog.name.toLowerCase())){
+      alert("This breed already exists");
+    }else{   
       dispatch(postDog(addDog));
       setInput({
         name: "",
@@ -125,10 +133,8 @@ export function DogCreate() {
       alert("Created correctly");
       navigate('/home')
     }
-    
-  
-
   }
+}
 
   useEffect(() => {
     dispatch(getTemperaments());

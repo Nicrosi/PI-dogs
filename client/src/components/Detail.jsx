@@ -23,7 +23,7 @@ export default function Detail(props) {
                 <img
                 className="detailImage"
                 src={myDog[0].image}
-                alt="alt"
+                alt=""
                 width="500px"
                 height="500px"
                 />
