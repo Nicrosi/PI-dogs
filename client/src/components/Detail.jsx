@@ -3,8 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail, clearDetail } from "../actions/index";
 import '../css/Detail.css'
-export default function Detail(props) {
-  console.log(props);
+export default function Detail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const myDog = useSelector((state) => state.detail);
