@@ -1,0 +1,44 @@
+.container__input{
+    width: 500px;
+    margin: auto;
+}
+
+.container__box label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container__select{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container__form__button{
+    display: flex;
+    margin: auto;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+form input{    
+    -moz-appearance: textfield;
+}
+
+.container__temp__box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 350px;
+    background-color: rgb(26, 80, 55);
+    border-radius: 10px;
+}
+
+.container__temp__box p{
+    margin-left: 20px;
+}

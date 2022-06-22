@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/Cards.css'
 
 export default function Card({ image, name, temperament, min_weight, max_weight }){
     return(
@@ -6,7 +7,7 @@ export default function Card({ image, name, temperament, min_weight, max_weight 
             <img
             className="imageCard"
             src = {image} width="200px" height="200px" 
-            alt = "alt"/>
+            alt = ""/>
             <h4>Name: {name}</h4>
             <h5>Temperaments: {temperament}</h5>
             <h5>Minimum Weight: {min_weight} Kg</h5>

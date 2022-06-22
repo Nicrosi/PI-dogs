@@ -1,0 +1,17 @@
+.card{
+    background-color: rgb(33, 97, 67);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 10px rgb(11, 32, 22);
+    text-align: center;
+    transition: all 300ms;
+}
+
+.card:hover{
+    background-color: rgb(39, 116, 80);
+}

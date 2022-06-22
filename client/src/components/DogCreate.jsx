@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
 import { getTemperaments, postDog } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
+import '../css/DogCreate.css'
 
 function validate(input) {
   let errors = {};

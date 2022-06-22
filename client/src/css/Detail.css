@@ -1,0 +1,25 @@
+.detailContainer{
+    background-color: rgb(33, 90, 63);
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 10px rgb(11, 32, 22);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.boturn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 20px 10px rgb(11, 32, 22);
+}
+
+.boturn:hover{
+    background-color: rgb(33, 90, 63);
+}

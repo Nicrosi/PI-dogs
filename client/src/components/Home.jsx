@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import Card from "./Cards";
 import Pages from "./Pages";
 import SearchBar from "./SearchBar";
+import '../css/Home.css'
+import cool_dog from '../assets/cool_dog.jpg'
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -57,7 +59,7 @@ export default function Home() {
     e.preventDefault();
     dispatch(orderByName(e.target.value));
     setCurrentPage(1);
-    setOrden(`Ordered ${e.target.value}`);
+    setOrden(e.target.value);
     console.log(e.target.value);
   }
 
@@ -65,7 +67,7 @@ export default function Home() {
     e.preventDefault();
     dispatch(orderByWeight(e.target.value));
     setCurrentPage(1);
-    setOrden(`Ordered ${e.target.value}`);
+    setOrden(e.target.value);
     console.log(e.target.value);
   }
   function handleChange(e) {
@@ -83,8 +85,7 @@ export default function Home() {
             handleClick(e);
           }}
         >
-          <img src="https://previews.123rf.com/images/marcel63/marcel630707/marcel63070700039/1262490-a-cool-dog.jpg" alt="" />
-          Dogs
+          <img src={cool_dog} alt="" />
         </div>
 
         <nav>
@@ -103,10 +104,12 @@ export default function Home() {
       <div className="container__options">
         <div className="container__filter">
           <select onChange={(e) => handleSort(e)}>
+            <option disabled selected>Order Alphabetically</option>
             <option value="asc">Ascending</option>
             <option value="desc">Descending</option>
           </select>
           <select onChange={(e) => handleSortW(e)}>
+            <option disabled selected>Order by Weight</option>
             <option value="max">Max Weight</option>
             <option value="min">Min Weight</option>
           </select>

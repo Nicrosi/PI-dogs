@@ -1,0 +1,101 @@
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 10%;
+background-color: rgb(19, 39, 29);
+}
+
+.logo {
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.logo img{
+border-radius: 50%;
+width: 150px;
+}
+
+.navlinks a, 
+.button {
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+color: #edf0f1;
+text-decoration: none;
+}
+
+.navlinks {
+list-style: none;
+display: flex;
+}
+
+.navlinks li {
+padding: 0px 20px;
+}
+
+.navlinks li a  {
+color: #fff;
+}
+
+
+.button {
+padding: 9px 25px;
+border-radius: 10px;
+background-color: rgb(43, 128, 88);
+border: solid 2px var(--tag-color);
+font-weight: 600;
+cursor: pointer;
+transition: all 300ms;
+}
+
+.button:hover {
+opacity: 0.7;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.containerCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,400px);
+    gap: 40px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.container__options{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+select{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(43, 128, 88);
+    color: #fff;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 170px;
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+select:hover{
+    background-color: rgb(39, 116, 80);
+}
