@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
     name = name.toLowerCase();
 
     try{
-        let findDog = await getDogs.findAll({
+        let findDog = await Dog.findAll({
             where:{
                 name: name
             }
