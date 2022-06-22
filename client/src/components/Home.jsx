@@ -53,6 +53,7 @@ export default function Home() {
 
   function handleFilterCreated(e) {
     dispatch(filterCreated(e.target.value));
+    setCurrentPage(1);
   }
 
   function handleSort(e) {
