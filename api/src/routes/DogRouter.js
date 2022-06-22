@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const { getDogs } = require('../../../client/src/actions/index.js');
 const router = Router();
 
 const {getAll} = require('../controllers/controllerDogs.js');
