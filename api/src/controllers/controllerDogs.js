@@ -21,7 +21,7 @@ const getApi = async () =>{
                 max_height: max_height ? max_height : 1,
                 life_span: x.life_span,
                 image: x.image.url,
-                temperament: x.temperament ? x.temperament : "This dog has no temperaments"
+                temperament: x.temperament ? x.temperament : "None"
             }
         })
         return getDog;

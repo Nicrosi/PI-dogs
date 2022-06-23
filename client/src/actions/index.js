@@ -57,12 +57,12 @@ export function getDogName(name){
                 payload: json.data
             })
         }catch(err){
-            console.log(err)
+            return dispatch({
+                type: 'GET_DOG_NAME',
+                payload: "error"
+            })
         }
-        return dispatch({
-            type: 'GET_DOG_NAME',
-            payload: "error"
-        })
+        
     }
 }
 

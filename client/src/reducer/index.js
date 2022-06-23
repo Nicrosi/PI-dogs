@@ -1,6 +1,6 @@
 const initialState = {
     dogs: [],
-    everyDog: [],
+    dogFiltered: [],
     temperaments: [],
     detail: []
 }
@@ -11,7 +11,7 @@ function mainReducer(state = initialState, action) {
             return{
                 ...state,
                 dogs: action.payload,
-                everyDog: action.payload
+                dogFiltered: action.payload
             }
         case 'GET_TEMPERAMENTS' :
             return{
@@ -19,10 +19,10 @@ function mainReducer(state = initialState, action) {
                 temperaments: action.payload
             }
         case 'FILTER_BY_TEMPERAMENT' :
-            const everyDog = state.everyDog;
+            const dogFiltered = state.dogFiltered;
 
-            let dogsFiltered = action.payload === "all" ? everyDog :
-                everyDog.filter((e) => {
+            let dogsFiltered = action.payload === "all" ? dogFiltered :
+                dogFiltered.filter((e) => {
                     if(e.temperament){
                         if(e.temperament.includes(action.payload)) {
                             return e;
@@ -36,16 +36,12 @@ function mainReducer(state = initialState, action) {
                     }
                     return false;
                 });
-            if(dogsFiltered.length < 0){
-                dogsFiltered = everyDog;
-                alert("No dog found with that temperament.");
-            }
             return{
                 ...state,
                 dogs: dogsFiltered
             }
         case 'FILTER_CREATED' :
-            const allDogs = state.everyDog;
+            const allDogs = state.dogFiltered;
             const filterCreated = action.payload === "created" ?
                 allDogs.filter(e => e.id.length > 4) :
                 allDogs.filter(e => e.id.length > 0 && e.id.length < 4);
@@ -53,7 +49,7 @@ function mainReducer(state = initialState, action) {
                 console.log(filterCreated, allDogs)
             return{
                 ...state,
-                dogs: action.payload === "all" ? state.everyDog : filterCreated
+                dogs: action.payload === "all" ? state.dogFiltered : filterCreated
             }
             }else{
                 return{
