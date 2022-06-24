@@ -108,7 +108,7 @@ export function DogCreate() {
     let isEmpty = Object.keys(errors).length === 0
 
     if(!isEmpty){
-      alert("No mandatory fields can remain empty")
+      alert("No fields can be empty or invalid")
     }else{
       const addDog = {
         name: input.name,
