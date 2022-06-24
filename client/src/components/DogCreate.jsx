@@ -21,6 +21,12 @@ function validate(input) {
   if (!input.max_height) {
     errors.max_height = "Maximum height is required";
   }
+  if(input.min_height > input.max_height){
+    errors.minh_maxh = "Minimum height cannot be higher than maximum height";
+  }
+  if(input.min_weight > input.max_weight){
+    errors.minw_maxw = "Minimum weight cannot be higher than maximum weight";
+  }
   return errors;
 }
 
@@ -176,20 +182,10 @@ export function DogCreate() {
               required
             />
             {errors.min_height && <p className="error"> {errors.min_height}</p>}
+            {errors.minh_maxh && <p className="error"> {errors.minh_maxh}</p>}
           </div>
           <div className="container__box">
-            <label htmlFor="min_weight">Maximum Weight:</label>
-            <input
-              type="number"
-              value={input.min_weight}
-              name="min_weight"
-              onChange={handleChange}
-              required
-            />
-            {errors.min_weight && <p className="error">{errors.min_weight}</p>}
-          </div>
-          <div className="container__box">
-            <label htmlFor="max_weight">Minimum Weight:</label>
+            <label htmlFor="max_weight">Maximum Weight:</label>
             <input
               type="number"
               value={input.max_weight}
@@ -197,9 +193,20 @@ export function DogCreate() {
               onChange={handleChange}
               required
             />
-            {errors.max_weight && <p className="error">{errors.max_weight}</p>}
-          </div>
-          
+            {errors.max_weight && <p className="error">{errors.max_weight}</p>} 
+          </div>    
+          <div className="container__box">
+            <label htmlFor="min_weight">Minimum Weight:</label>
+            <input
+              type="number"
+              value={input.min_weight}
+              name="min_weight"
+              onChange={handleChange}
+              required
+            />            
+            {errors.min_weight && <p className="error">{errors.min_weight}</p>}                     
+            {errors.minw_maxw && <p className="error">{errors.minw_maxw}</p>}
+          </div>                  
           <div className="container__box">
             <label htmlFor="life_span">Lifespan:</label>
             <input
