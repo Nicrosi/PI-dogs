@@ -9,8 +9,8 @@ https://pi-dogs-ruby.vercel.app/
  
 ## 🧱 Tech Stack
 - ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)&nbsp;
-- ![Redux](https://img.shields.io/badge/-Redux%20Js-05122A?style=flat&logo=Redux)&nbsp;
-- ![Express](https://img.shields.io/badge/-Express%20Js-05122A?style=flat&logo=express)&nbsp;
+- ![Redux](https://img.shields.io/badge/-Redux-05122A?style=flat&logo=Redux)&nbsp;
+- ![Express](https://img.shields.io/badge/-Express.js-05122A?style=flat&logo=express)&nbsp;
 - ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=PostgreSQL)&nbsp;
 - ![Sequelize](https://img.shields.io/badge/-Sequelize.js-05122A?style=flat&logo=Sequelize)&nbsp;
  
